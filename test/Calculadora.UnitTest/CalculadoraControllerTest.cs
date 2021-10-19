@@ -19,7 +19,7 @@ namespace Calculadora.UnitTest
         [InlineData(50, 30, 80)]
         [InlineData(10, -3, 7)]
         [InlineData(-50, -5, -55)]
-        public void Soma_CalculoDeSomatoria_ReturnaSomaComSucesso(int numero1, int numero2, int resultado)
+        public void Soma_CalculoDeSomatoria_RetornaSomaComSucesso(int numero1, int numero2, int resultado)
         {
             //Arrange
             Operacao.Request request = new()
@@ -45,7 +45,7 @@ namespace Calculadora.UnitTest
         [InlineData(50, 30, 20)]
         [InlineData(10, -3, 13)]
         [InlineData(-50, -5, -45)]
-        public void Soma_CalculoDeSubtracao_ReturnaSubtracaoComSucesso(int numero1, int numero2, int resultado)
+        public void Soma_CalculoDeSubtracao_RetornaSubtracaoComSucesso(int numero1, int numero2, int resultado)
         {
             //Arrange
             Operacao.Request request = new()
@@ -71,7 +71,7 @@ namespace Calculadora.UnitTest
         [InlineData(50, 30, 1500)]
         [InlineData(10, -3, -30)]
         [InlineData(-50, -5, 250)]
-        public void Soma_CalculoDeMultiplicacao_ReturnaMultiplicacaoComSucesso(int numero1, int numero2, int resultado)
+        public void Soma_CalculoDeMultiplicacao_RetornaMultiplicacaoComSucesso(int numero1, int numero2, int resultado)
         {
             //Arrange
             Operacao.Request request = new()
@@ -97,7 +97,7 @@ namespace Calculadora.UnitTest
         [InlineData(50, 10, 5)]
         [InlineData(10, -2, -5)]
         [InlineData(-50, -5, 10)]
-        public void Soma_CalculoDeDivisao_ReturnaDivisaoComSucesso(int numero1, int numero2, int resultado)
+        public void Soma_CalculoDeDivisao_RetornaDivisaoComSucesso(int numero1, int numero2, int resultado)
         {
             //Arrange
             Operacao.Request request = new()

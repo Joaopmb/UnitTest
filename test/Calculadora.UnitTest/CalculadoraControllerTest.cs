@@ -117,5 +117,28 @@ namespace Calculadora.UnitTest
             Assert.IsType<int>(okObjectResult.Value);
             Assert.Equal(resultado, okObjectResult.Value);
         }
+
+        [Fact]
+        public void Soma_DivisorZero_RetornaMensagem()
+        {
+            //Arrange
+            Operacao.Request request = new()
+            {
+                Numero1 = 5,
+                Numero2 = 0,
+            };
+            var controller = CreateController();
+
+            //Act
+            var actionResult = controller.Divisao(request);
+
+            //Assert
+            var badRequest = actionResult as BadRequestObjectResult;
+            Assert.NotNull(badRequest);
+            Assert.IsType<string>(badRequest.Value);
+            Assert.Contains("divisor", badRequest.Value.ToString());
+            Assert.Contains("zero", badRequest.Value.ToString());
+
+        }
     }
 }

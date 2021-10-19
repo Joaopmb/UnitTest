@@ -40,6 +40,9 @@ namespace Calculadora.WebApi.Controllers
         [Route("Divisao")]
         public IActionResult Divisao([FromBody]Operacao.Request request)
         {
+            if (request.Numero2 == 0)
+                return BadRequest("Não é possivel uma divisão com divisor zero");
+
             var resultado = request.Numero1 / request.Numero2;
             return Ok(resultado);
         }

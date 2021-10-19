@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Calculadora.WebApi\Calculadora.WebApi.csproj" />
+  </ItemGroup>
+
 </Project>
